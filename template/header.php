@@ -2,11 +2,26 @@
 <html>
 	<head>
 		<title>
-			<?php if($lan=='en')
-                echo 'Department of Environment';
-            else
-                echo 'वातावरण विभाग';
-        	?>
+			<?php
+				if($action==0)
+				{
+					if (!empty($query)) {
+						$pageRow = $groups->getByURLName($query);
+						if ($pageRow) {
+							$pageName = $pageRow['name'];
+							$pageNameEn = $pageRow['nameen'];		
+						}
+					}
+				}
+			?>
+			<?php if($lan=='en'){
+                echo 'Department of Environment - ';
+                if($pageNameEn!=""){ echo $pageNameEn;}else if(isset($_GET['action'])){ echo $_GET['action'];}else{ echo "Home";}
+            }
+            else{
+                echo 'वातावरण विभाग - ';
+            	if($pageName!=""){ echo $pageName;}else if(isset($_GET['action'])){ echo $_GET['action'];}else{ echo "गृहपृष्ठ";}
+        	}?>
 		</title>
 		<?php include('baselocation.php'); ?>
 		<meta charset="utf-8" />
