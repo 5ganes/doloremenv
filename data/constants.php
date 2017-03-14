@@ -31,7 +31,7 @@ define("INFO_OFFICER", 362);
 define("LINKS", 363);
 define("NEWS", 321);
 define("INFO_OFFICER", 274);
-define("PHOTO_GALLERY", 367);
+define("PHOTO_GALLERY", 625);
 define("PUBLICATION", 338);
 define("YOUTUBE", 373);
 define("VIDEO_GALLERY", 386);

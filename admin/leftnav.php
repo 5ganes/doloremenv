@@ -24,7 +24,7 @@
             </li>
             <li><a href="cms.php?id=362&parentId=0&groupType=Other">Information Officer</a></li>
             <li><a href="cms.php?id=581&parentId=0&groupType=Other">Hot News</a></li>
-            <li><a href="cms.php?id=367&parentId=0&groupType=Other">Photo Gallery</li>
+            <<!-- li><a href="cms.php?id=367&parentId=0&groupType=Other">Photo Gallery</li> -->
             <!-- <li><a href="bills.php">Manage Bills</a></li> -->
             <li><a href="cms.php?groupType=Other">Manage Other</a></li>
     	</ul>

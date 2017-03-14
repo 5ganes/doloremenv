@@ -4200,3 +4200,39 @@
 	.audio-video img:hover{
 		box-shadow: 3px 3px 12px gray; width: 100%;
 	}
+
+	.photo-gallery article{
+		width: 24%;margin: 0 0 6em 6em;
+	}
+	.photo-gallery article img{
+		width: 100%; border-radius: 10px;
+		-moz-transition: transform 1s;
+	    -webkit-transition: transform 1s;
+	    -ms-transition: transform 1s;
+		transition: transform 1s;
+	}
+	.photo-gallery article img:hover{
+		box-shadow: 6px 6px 16px gray;
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg); opacity: 0.7;
+		/*position: absolute; overflow: hidden;*/
+	}
+	.photo-gallery article h3{
+		border-bottom: none;text-align: center;
+	}
+
+	@media screen and (max-width: 600px){
+		.photo-gallery{
+			flex-direction: column;
+		}
+		.photo-gallery article{
+			width: 80%;
+		}
+	}
+	@media screen and (min-width: 601px) and (max-width: 900px){
+		.photo-gallery article{
+			width: 35%;
+		}
+	}

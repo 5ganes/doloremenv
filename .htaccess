@@ -14,6 +14,8 @@ RewriteRule ^en/contact-us index.php?action=contact-us [L]
 RewriteRule ^en/([-A-Za-z0-9]+)$ index.php?lan=en&query=$1 [L]
 RewriteRule ^en index.php?lan=en [L]
 
+RewriteRule photo-gallery index.php?action=photo_gallery [L]
+
 RewriteRule ^video-gallery index.php?action=video_gallery [L]
 
 RewriteRule ^forgotpassword index.php?action=forgot_password [L]
