@@ -19,7 +19,7 @@
         <h3><?php if($lan=='en') echo 'Important Links'; else echo 'महत्वपुर्ण लिंकहरु';?></h3>
         <ul class="contact">
           <?php
-            $links = $groups->getByParentIdAndTypeWithLimit('Important Links', 0, 4);
+            $links = $groups->getByParentIdAndTypeWithLimit('Important_Links', 0, 4);
             while($row = $conn->fetchArray($links)){
               if($lan=='en')
                 echo '<li><a href="'.$row['urlname'].'" target="_blank">'.$row['nameen'].'</a></li>';
@@ -31,11 +31,11 @@
       </article>
       <article>
         <?php
-        $contact = $groups->getById(CONTACT);
-        $contact = $conn->fetchArray($contact);
+        $contact = $groups->getByURLName(CONTACT);
+        // $contact = $conn->fetchArray($contact);
         ?>
         <h3><?php if($lan=='en') echo $contact['nameen']; else echo $contact['name'];?></h3>
-        <p><?php if($lan=='en') echo $about['shortcontentsen']; else echo $about['shortcontents'];?></p>
+        <p><?php if($lan=='en') echo $contact['shortcontentsen']; else echo $contact['shortcontents'];?></p>
         <ul class="actions">
           <li><a href="<?php if($lan=='en') echo 'en/'; echo $contact['urlname'] ?>" class="button big">Read More</a></li>
         </ul>

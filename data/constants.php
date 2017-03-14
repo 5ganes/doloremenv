@@ -25,7 +25,7 @@ define("LISTING_LIMIT", 15); // IMAGE AND VIDEO GALLERY LIMIT FOR CLIENT
 
 define("SLIDER", 8);
 define("WELCOME", 176);	
-define("CONTACT", 587);
+define("CONTACT", 'contact-us');
 
 define("INFO_OFFICER", 362);
 define("LINKS", 363);
