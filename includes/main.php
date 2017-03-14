@@ -1,3 +1,33 @@
+<style type="text/css">
+  header h2{
+    border-bottom: solid 3px #f56a6a;
+    display: inline-block;
+    margin: 0 0 1em 0;
+    padding: 0 0.75em 0.5em 0;
+  }
+  header h2 a{border-bottom: none}
+  
+  .main-header{
+    display: flex;justify-content: space-between;
+  }
+  .main-header h2:last-child{
+    border: 2px solid gray;
+    font-size: 22px;
+    padding: 0.4em 1em;
+    box-shadow: 4px 4px 9px grey;background: #FFFF6F;
+  }
+  .main-header h2:last-child:hover{
+    box-shadow: 4px 4px 20px gray
+  }
+  @media screen and (max-width: 600px){
+    .main-header{
+      flex-direction: column;
+    }
+    .main-header h2:last-child{
+      margin-bottom: 0;
+    }
+  }
+</style>
 <!-- Main -->
   <div id="main">
     <div class="inner">
@@ -27,8 +57,9 @@
           <?php
             $msg_from_dg = $groups->getById(MSG_FROM_DG); $msg_from_dg = $conn->fetchArray($msg_from_dg);
             ?>
-          <header class="major">
+          <header class="major main-header">
             <h2><?php if($lan=='en') echo 'Messages From'; else echo 'सन्देशहरु';?></h2>
+            <h2><a href="http://pollution.gov.np" target="_blank">DoE, Air Quality Monitoring</a></h2>
           </header>
           <div class="features msg-from-dg">
             <article style="width: 100%">
