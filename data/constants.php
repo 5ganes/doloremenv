@@ -55,7 +55,7 @@ define('ABOUT', 338);
 
 
 ////////////////LINKS AND PAGE TYPES////////////////////////
-$groupTypesArray = array("Header", "Navigation", "Important Links", "Other");
+$groupTypesArray = array("Header", "Navigation", "Important_Links", "Other");
 
 $linkTypesArray = array("Normal Group", "Link", "File", "Contents Page", "Gallery", "List", "Video Gallery");
 

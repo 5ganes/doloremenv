@@ -27,7 +27,7 @@
 					
 					<ul class="contact">
 						<?php
-						$links = $groups->getByParentIdAndType(0, 'Important Links');
+						$links = $groups->getByParentIdAndType(0, 'Important_Links');
 						while($row = $conn->fetchArray($links)){
 							if($lan=='en')
 								echo '<li><a href="en/'.$row['urlname'].'" target="_blank">'.$row['nameen'].'</a></li>';

@@ -1,7 +1,7 @@
 <style>
 	.download{width:100%;}
 	.download ul{ margin:0;padding: 0;}
-	.download ul li{ list-style:none;display: flex;margin: 1em;}
+	.download ul li{ list-style:none;margin: 1em;}
 	.download ul li div{
 		width: 49%;padding: 1%;
 	}
@@ -10,11 +10,23 @@
 	}
 	.download ul li div a{
 		border:2px solid;
-		border-top: none
+		border-top: none;
 	}
 	.download ul li div a:hover{
 		box-shadow: 2px 2px 5px gray;
 	}
+
+	.submenu ul li{
+		list-style: disc;
+	}
+	.submenu ul li a{
+		box-shadow: 2px 2px 5px gray; color: #f56a6a;
+		border-bottom: none;padding: 0.6em 1em; display: block;
+	}
+	.submenu ul li a:hover{
+		box-shadow: 4px 4px 12px red;color:#009B3E;
+	}
+
 	@media screen and (max-width: 650px){
 		.download ul li div:first-child{
 			width: 86%; margin-right:2%; 
@@ -62,7 +74,7 @@
 				$submenu=$conn->fetchArray($sub);
 				if($submenu['linkType']=='Normal Group' or $submenu['linkType']=='Contents Page'){
 					echo '<p style="font-weight: bold;">#'.$pageName.'</p>';
-					echo '<div class="download"><ul>';
+					echo '<div class="download submenu"><ul>';
 					$down=$groups->getByParentId($pageId);
 					while($downRow=$conn->fetchArray($down))
 					{?>
@@ -76,7 +88,7 @@
 					$down=$groups->getByParentId($pageId);
 					while($downRow=$conn->fetchArray($down))
 					{?>
-						<li>
+						<li style="display: flex;">
 			            	<div><? if($lan=='en') echo $downRow['nameen']; else echo $downRow['name']; ?></div>
 			            	<div>
 			                	<a href="<?=CMS_FILES_DIR.$downRow['contents'];?>"><img src="images/pdf.png" width="30" /></a>

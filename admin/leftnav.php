@@ -13,7 +13,7 @@
             <li><a href="cms.php">Manage Contents</a></li>
             <li><a href="cms.php?groupType=Header">Manage Menubar</a></li>
             <li><a href="cms.php?groupType=Navigation">Manage Navigation</a></li>
-            <li><a href="cms.php?groupType=Important Links">Manage Important Links</a></li>
+            <li><a href="cms.php?groupType=Important_Links">Manage Important Links</a></li>
             <!-- <li><a href="cms.php?id=8&parentId=0&groupType=Other">Slider</a></li> -->
             <!-- <li><a href="cms.php?parentId=241&groupType=Other&open">Information Categories</a></li> -->
             <!-- <li><a href="cms.php?parentId=275&groupType=Other&open">Important Links</a></li> -->
@@ -25,7 +25,7 @@
             <li><a href="cms.php?id=362&parentId=0&groupType=Other">Information Officer</a></li>
             <li><a href="cms.php?id=581&parentId=0&groupType=Other">Hot News</a></li>
             <li><a href="cms.php?id=367&parentId=0&groupType=Other">Photo Gallery</li>
-            <li><a href="bills.php">Manage Bills</a></li>
+            <!-- <li><a href="bills.php">Manage Bills</a></li> -->
             <li><a href="cms.php?groupType=Other">Manage Other</a></li>
     	</ul>
   	</li>
