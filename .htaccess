@@ -12,7 +12,7 @@ RewriteRule ^en/home index.php?lan=en [L]
 RewriteRule ^en/bills index.php?action=bills [L]
 RewriteRule ^en/contact-us index.php?action=contact-us [L]
 RewriteRule ^en/([-A-Za-z0-9]+)$ index.php?lan=en&query=$1 [L]
-RewriteRule ^en index.php?lan=en [L]
+RewriteRule ^en$ index.php?lan=en [L]
 
 RewriteRule photo-gallery index.php?action=photo_gallery [L]
 
