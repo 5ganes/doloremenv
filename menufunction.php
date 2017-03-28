@@ -1,5 +1,5 @@
 <?php
-function createMenu($parentId, $groupType,$lan)
+function createMenu($parentId, $groupType,$lan, $count=1)
 {
 	global $groups;
 	global $conn;
@@ -24,7 +24,8 @@ function createMenu($parentId, $groupType,$lan)
 		<?
 
 		if($groupRow['linkType']=="Normal Group" and $groupRow['urlname']!='video-gallery' and $groupRow['urlname']!="division")
-			createMenu($groupRow['id'], $groupType, $lan);
+			if($count<2)
+				createMenu($groupRow['id'], $groupType, $lan, $count+1);
 
 		echo "</li>\n";
 	}
