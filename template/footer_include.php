@@ -1,44 +1,37 @@
-<!-- Section: footer section -->
-  <section>
-    <!-- <header class="major">
-      <h2>Ipsum sed dolor</h2>
-    </header> -->
-    <div class="posts footer-div">
-      <article>
-        <?php
-        $about = $groups->getById(ABOUT);
-        $about = $conn->fetchArray($about);
-        ?>
-        <h3><?php if($lan=='en') echo $about['nameen']; else echo $about['name'];?></h3>
-        <p><?php if($lan=='en') echo $about['shortcontentsen']; else echo $about['shortcontents'];?></p>
-        <ul class="actions">
-          <li><a href="<?php if($lan=='en') echo 'en/'; echo $about['urlname'] ?>" class="button big">Read More</a></li>
-        </ul>
-      </article>
-      <article>
-        <h3><?php if($lan=='en') echo 'Important Links'; else echo 'महत्वपुर्ण लिंकहरु';?></h3>
-        <ul class="contact">
-          <?php
-            $links = $groups->getByParentIdAndTypeWithLimit('Important_Links', 0, 4);
-            while($row = $conn->fetchArray($links)){
-              if($lan=='en')
-                echo '<li><a href="'.$row['urlname'].'" target="_blank">'.$row['nameen'].'</a></li>';
-              else
-                echo '<li><a href="'.$row['urlname'].'" target="_blank">'.$row['name'].'</a></li>';
-            }
-          ?>
-        </ul>
-      </article>
-      <article>
-        <?php
-        $contact = $groups->getByURLName(CONTACT);
-        // $contact = $conn->fetchArray($contact);
-        ?>
-        <h3><?php if($lan=='en') echo $contact['nameen']; else echo $contact['name'];?></h3>
-        <p><?php if($lan=='en') echo $contact['shortcontentsen']; else echo $contact['shortcontents'];?></p>
-        <ul class="actions">
-          <li><a href="<?php if($lan=='en') echo 'en/'; echo $contact['urlname'] ?>" class="button big">Read More</a></li>
-        </ul>
-      </article>
+        </section>
     </div>
-  </section>
+</div>  
+<div class="clearfix"></div>
+<!--//wrapper-->
+
+<!-- ******FOOTER****** --> 
+<footer class="footer">
+    <!--//footer-content-->
+    <div class="bottom-bar">
+        <div class="container">
+            <div class="row">
+                <small class="copyright col-md-6 col-sm-12 col-xs-12">
+                    <?php if($lan=='en'){?>
+                        Copyright @ <?php echo date('Y'); ?>   Department of Environment | Developed By: <a href="http://www.krishighar.com/" style="color:#fff">Team Krishighar</a>
+                    <?php }
+                    else{?>
+                        सर्वाधिकार @ <?php echo date('Y'); ?>   वातावरण विभाग | निर्माण तथा परिमार्जन: <a href="http://www.krishighar.com/" style="color:#fff">कृषिघर परिवार</a>
+                    <?php }?>
+                </small>
+                <ul class="social pull-right col-md-6 col-sm-12 col-xs-12">
+                    <li>
+                        <a href="https://twitter.com/DoEnv_Nepal?ref_src=twsrc%5Etfw&ref_url=http%3A%2F%2Fdoenv.gov.np%2Fhome" ><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/doenv/" ><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" ><i class="fa fa-youtube"></i></a></li>
+                    <!-- <li><a href="#" ><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#" ><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#" ><i class="fa fa-pinterest"></i></a></li>
+                    <li><a href="#" ><i class="fa fa-skype"></i></a></li> 
+                    <li class="row-end"><a href="#" ><i class="fa fa-rss"></i></a></li> -->
+                </ul>
+            </div><!--//row-->
+        </div><!--//container-->
+    </div><!--//bottom-bar-->
+</footer>
+<!--//footer-->

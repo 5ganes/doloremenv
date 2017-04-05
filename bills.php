@@ -5,20 +5,22 @@
   class Template
   {
     
-    function __construct($page,$action,$pageLinkType,$query)
+    function __construct($page,$action,$pageLinkType,$query,$lan)
     {
-      global $groups; global $conn;
+      // echo $page; echo $query; die();
+      global $groups; global $listingFiles; global $conn;
       require_once('template/header.php');
-      //require_once('template/sidebar.php');
+      require_once('template/sidebar.php');
       require_once('bills_content.php');
       require_once('template/footer.php');
     }
   }
 
   require_once('clientobjects.php');
+  $lan=$_GET['lan']; //echo $lan; die();
   
   if(isset($_GET['action'])){
-    $page=isset($_GET['action']); $action=1; $pageLinkType='';
+    $page=$_GET['action']; $action=1; $pageLinkType='';
   }
   else if(isset($pageLinkType)){
     $page="cmspage.php"; $action=0;
@@ -27,6 +29,4 @@
   else{
     $page="main.php"; $action=0; $pageLinkType='';
   }
-  $template=new Template($page,$action,$pageLinkType,$query);
-
-  ?>
+  $template=new Template($page,$action,$pageLinkType,$query,$lan);

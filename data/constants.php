@@ -5,7 +5,7 @@ define("ADMIN_LEFT_WIDTH", "20%");
 define("ADMIN_BODY_WIDTH", "80%");
 define("ADMIN_TITLE", "Admin Control Panel");
 define("PAGE_TITLE", "Department of Environment");
-define("SITE_URL", "http://localhost:8089/doenv/");
+define("SITE_URL", "http://localhost/doenv/");
 
 
 ////////////////IMAGE FOLDER LOCATIONS////////////////////////
@@ -23,7 +23,7 @@ define("PAGING_LIMIT", 30); // LISTING TYPE LIMIT FOR CLIENT
 define("LISTING_LIMIT", 15); // IMAGE AND VIDEO GALLERY LIMIT FOR CLIENT
 
 
-define("SLIDER", 8);
+define("SLIDER", 723);
 define("WELCOME", 176);	
 define("CONTACT", 'contact-us');
 

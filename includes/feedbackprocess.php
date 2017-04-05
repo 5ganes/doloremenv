@@ -9,14 +9,11 @@ if(isset($_POST['btnFeedback']))
 		// echo 'sdf'; die();
 		extract($_POST);
 		
-		if(!empty($txtname) && !empty($txtemail) && !empty($txtcomment) && !empty($security_code))
+		if(!empty($name) && !empty($email) && !empty($subject) && !empty($comment) && !empty($security_code))
 		{
+			$feedbacks -> save($name, $address, $phone, $email, $subject, $comment);
 			
-			
-	
-			$feedbacks -> save($txtname, $txtaddress, $txtemail, $txtcountry, $txtcomment);
-			
-			$msg='Name='.$txtname.'<br/>Address='.$txtaddress.'<br/>Email='.$txtemail.'<br/>Country='.$txtcountry.'<br/>Comment='.$txtcomment;
+			$msg='Name='.$name.'<br/>Address='.$address.'<br>Phone='.$phone.'<br/>Email='.$email.'<br/>Subject='.$subject.'<br/>Comment='.$comment;
 			//include('includes/sendemail.php');
 			$headers  = "";
 			$headers .= "MIME-Version: 1.0 \r\n";
@@ -24,13 +21,11 @@ if(isset($_POST['btnFeedback']))
 			$headers .= "X-Priority: 1\r\n";
 			//sendEmail("kh6ganesh@yahoo.com", "Inquiry", $msg, $name);
 			
-			$arrTo = array("kh6ganesh@gmail.com");
+			$arrTo = array("info@doenv.gov.np");
 			$subject = "Inquiry Details :";
 			
 			mail($arrTo[0], $subject, $msg, $headers);
 			header("Location: index.php?action=contact-us&msg=Feedback posted successfully. Thank you.");
-			
-	
 		}	
 		else
 			$feedbackmsg = "* Please enter all required fields";

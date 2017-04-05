@@ -10,8 +10,8 @@
 			// echo $page; echo $query; die();
 			global $groups; global $listingFiles; global $conn;
 			require_once('template/header.php');
-			require_once('template/body.php');
 			require_once('template/sidebar.php');
+			require_once('template/body.php');
 			require_once('template/footer.php');
 		}
 	}

@@ -1,123 +1,78 @@
-<style>
-	.download{width:100%;}
-	.download ul{ margin:0;padding: 0;}
-	.download ul li{ list-style:none;margin: 1em;}
-	.download ul li div{
-		width: 49%;padding: 1%;
-	}
-	.download ul li div:nth-child(2){
-		padding-top: 0;
-	}
-	.download ul li div a{
-		border:2px solid;
-		border-top: none;
-	}
-	.download ul li div a:hover{
-		box-shadow: 2px 2px 5px gray;
-	}
-
-	.submenu ul li{
-		list-style: disc;
-	}
-	.submenu ul li a{
-		box-shadow: 2px 2px 5px gray; color: #f56a6a;
-		border-bottom: none;padding: 0.6em 1em; display: block;
-	}
-	.submenu ul li a:hover{
-		box-shadow: 4px 4px 12px red;color:#009B3E;
-	}
-
-	@media screen and (max-width: 650px){
-		.download ul li div:first-child{
-			width: 86%; margin-right:2%; 
-		}
-		.download ul li div:nth-child(2){
-			width: 10%;
-		}
-	}
-	@media screen and (max-width: 450px){
-		.download ul li{
-			flex-direction: column;
-		}
-		.download ul li div:first-child{
-			width: 100%;
-		}
-		.download ul li div:nth-child(2){
-			width: 100%; text-align: center;
-		}
-	}
-</style>
-<!-- Main -->
-<div id="main">
-    <div class="inner">
-    <?php require 'template/header_include.php'; ?>
-      <!-- Banner -->
-        <section id="banner">
-          <div class="content">
-            <header>
-              <h1><?php if($lan!='en') echo $pageName; else echo $pageNameEn;?></h1>
-            </header>
-            <p>
-                <?php
+<div class="col-md-9">
+    <div class="panel panel-primary">          
+        <div class="panel-heading"><h3><?php if($lan!='en') echo $pageName; else echo $pageNameEn;?></h3></div>
+        <div class="panel-body dynamic">
+            <?php
                 $content=$groups->getById($pageId);
                 $contentGet=$conn->fetchArray($content);
                 if($lan!='en')
                    echo $contentGet['contents'];
                 else echo $contentGet['contentsen'];
-                ?>
-            </p>
-            
-            <?php
-			$sub=$groups->getByParentId($pageId);
-			if($conn->numRows($sub)>0)
-			{
-				$submenu=$conn->fetchArray($sub);
-				if($submenu['linkType']=='Normal Group' or $submenu['linkType']=='Contents Page'){
-					echo '<p style="font-weight: bold;">#'.$pageName.'</p>';
-					echo '<div class="download submenu"><ul>';
-					$down=$groups->getByParentId($pageId);
-					while($downRow=$conn->fetchArray($down))
-					{?>
-						<li><a href="<?php if($lan=='en') echo 'en/'; echo $downRow['urlname'];?>"><?php if($lan=='en') echo $downRow['nameen']; echo $downRow['name'];?></a></li>
-					<? }
-					echo '</ul></div>';
-				}
-				else if($submenu['linkType']=='File'){
-					echo '<p style="font-weight: bold;">#Attachments</p>';
-					echo '<div class="download"><ul>';
-					$down=$groups->getByParentId($pageId);
-					while($downRow=$conn->fetchArray($down))
-					{?>
-						<li style="display: flex;">
-			            	<div><? if($lan=='en') echo $downRow['nameen']; else echo $downRow['name']; ?></div>
-			            	<div>
-			                	<a href="<?=CMS_FILES_DIR.$downRow['contents'];?>"><img src="images/pdf.png" width="30" /></a>
-			             	</div>
-						</li>
-					<? }
-					echo '</ul></div>';
-				}
-				else if($submenu['linkType']=='Link'){
-					echo '<p style="font-weight: bold;">#Links</p>';
-					echo '<div class="download"><ul>';
-					$down=$groups->getByParentId($pageId);
-					while($downRow=$conn->fetchArray($down))
-					{?>
-						<li>
-			            	<div style="float: left;width: 500px;">
-			            		<a href="<?=$downRow['contents'];?>" target="_blank"><? if($lan=='en') echo $downRow['nameen']; else echo $downRow['name']; ?></a>
-			            	</div>
-						</li>
-					<? }
-					echo '</ul></div>';
-				}
-			}
-			?>
-
-          </div>
-          
-        </section>
-        <br>
-        <?php require 'template/footer_include.php';?>
-    </div>
-</div>	
+            ?>
+        </div>
+        <?php
+		$sub=$groups->getByParentId($pageId);
+		if($conn->numRows($sub)>0)
+		{?>
+	        <div class="page-row">
+			    <div class="table-responsive">
+			    	<table class="table table-boxed">
+			            <thead>
+			                <tr>
+			                	<?php $submenu=$conn->fetchArray($sub);
+			                	if($submenu['linkType']=='Normal Group' or $submenu['linkType']=='Contents Page'){?>
+					                <th width="10%">SN</th>
+					                <th width="90%">Submenu</th>
+			                	<?php }
+			                	else if($submenu['linkType']=='File'){?>
+			                		<th width="10%">SN</th>
+					                <th width="70%">Filename</th>
+					                <th width="20%">Download</th>
+			                	<?php }
+			                	else if($submenu['linkType']=='Link'){?>
+			                		<th width="10%">SN</th>
+					                <th width="90%">Various Links</th>
+			                	<?php }?>
+			                </tr>
+			            </thead>
+			            <tbody>
+			            	<?php 
+			            	$down=$groups->getByParentId($pageId);
+							if($submenu['linkType']=='Normal Group' or $submenu['linkType']=='Contents Page'){
+								$count=1;
+								while($downRow=$conn->fetchArray($down))
+								{?>
+					                <tr>
+					                    <td><?php echo $count++;?></td>
+					                    <td><a href="<?php if($lan=='en') echo 'en/'; echo $downRow['urlname'];?>"><?php if($lan=='en') echo $downRow['nameen']; echo $downRow['name'];?></a></td>
+					                </tr>
+				            	<?php }
+				            }
+				            else if($submenu['linkType']=='File'){
+				            	$count=1;
+								while($downRow=$conn->fetchArray($down))
+								{?>
+									<tr>
+					                    <td><?php echo $count++;?></td>
+					                    <td><? if($lan=='en') echo $downRow['nameen']; else echo $downRow['name']; ?></td>
+					                    <td><a class="btn btn-success" download="" href="<?=CMS_FILES_DIR.$downRow['contents'];?>"><i class="fa fa-download"></i> Download </a></td>
+					                </tr>
+								<?php }
+							}
+							else if($submenu['linkType']=='Link'){
+								$count=1;
+								while($downRow=$conn->fetchArray($down))
+								{?>
+									<tr>
+					                    <td><?php echo $count++;?></td>
+					                    <td><a href="<?=$downRow['contents'];?>"><? if($lan=='en') echo $downRow['nameen']; else echo $downRow['name']; ?></a></td>
+					                </tr>
+								<?php }
+							}?>
+			            </tbody>
+			        </table>
+				</div>
+			</div>
+		<?php }?>
+    </div>            
+</div>
