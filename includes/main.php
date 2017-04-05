@@ -72,15 +72,6 @@
 
     <!-- right sidebar starts here -->
     <div class="col-md-4" style="padding-right: 5px;">
-        <div class="blockmenu">
-          <a href="bills.php" target="_blank">
-            <span class="block-icon"></span>
-            <div class="block-content">
-              <div class="block-content-title" style="font-size:18px">भुक्तानिका लागी प्राप्त विल</div>
-            </div>
-            </a>
-        </div>
-        <!-- vuktani ends here -->
         <section class="links panel panel-primary">
             <div class="panel-heading">
               <h3><?php if($lan=='en') echo 'Important Links'; else echo 'महत्वपुर्ण लिंकहरु';?></h3>
@@ -99,18 +90,7 @@
         </section>
         <!-- sambandhit links end here -->
 
-        <!-- email and weather -->
-        <div class="blockmenu-next email">
-          <a href="https://mail2.nitc.gov.np/src/login.php" target="_blank">
-            </a>
-        </div> 
-        <div class="blockmenu-next weather">
-            <a href="http://www.mfd.gov.np/" target="_blank">
-            </a>
-        </div>
-        <!-- email and weather ends here -->
-
-        <!--video link starts here-->
+         <!--video link starts here-->
         <section class="links panel panel-primary">
             <?php $video = $groups->getById(SINGLE_VIDEO); $video = $conn->fetchArray($video); ?>
             <div class="panel-heading">
@@ -122,6 +102,15 @@
             <!--<div class="panel-footer"><a class="read-more" href="">थप [+]<i class="fa fa-chevron-right"></i></a></div>-->
         </section>
         <!-- video links end here -->
+
+        <!-- email and weather -->
+        <div class="blockmenu-next email">
+          <a href="https://mail2.nitc.gov.np/src/login.php" target="_blank"><img src="images/checkmail.png"></a>
+        </div> 
+        <div class="blockmenu-next weather">
+            <a href="http://www.mfd.gov.np/" target="_blank"><img src="images/weather.jpg"></a>
+        </div>
+        <!-- email and weather ends here -->
     
         <div align="center">
             <div class="clearfix"></div>
@@ -135,13 +124,21 @@
               </a>
             </div>
         </div>
+
+        <div class="blockmenu">
+          <a href="bills.php" target="_blank">
+            <span class="block-icon"></span>
+            <div class="block-content">
+              <div class="block-content-title" style="font-size:18px">भुक्तानिका लागी प्राप्त विल</div>
+            </div>
+            </a>
+        </div>
+        <!-- vuktani ends here -->
         
         <!--twitter block starts here-->
         <div>
-          <!-- <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 520px; height: 350px; padding: 0px; border: none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px; min-height: 200px;" data-widget-id="783565371601072129" title="Twitter Timeline" src="twitter/saved_resource.html"></iframe>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> -->
-
-          <a class="twitter-timeline" data-width="520" data-height="350" data-theme="light" data-link-color="#981CEB" href="https://twitter.com/DoEnv_Nepal">Tweets by DoEnv_Nepal</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <!-- <a class="twitter-timeline" data-width="520" data-height="350" data-theme="light" data-link-color="#981CEB" href="https://twitter.com/DoEnv_Nepal">Tweets by DoEnv_Nepal</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdoenv%2F&tabs=timeline&width=250&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="250" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
         </div>
         <!--twitter block ends here-->

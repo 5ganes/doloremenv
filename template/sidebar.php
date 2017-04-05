@@ -6,7 +6,7 @@
         <h4 style="text-align:center;"><?php if($lan=='en') echo $msg_from_dg['nameen']; else echo $msg_from_dg['name'];?></h4>      
         <p style="text-align: center;">
             <span style="font-size:16px;">
-                <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_dg['image'] ?>" style="width: 230px;height:230px;border-width: 1px; border-style: solid;">
+                <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_dg['image'] ?>" style="width: 70%;border-width: 1px; border-style: solid;">
             </span>
         </p>
         <p style="text-align: center;">
@@ -43,7 +43,7 @@
             <h4 style="text-align:center;"><?php if($lan=='en') echo $msg_from_sp['nameen']; else echo $msg_from_sp['name'];?></h4>      
             <p style="text-align: center;">
                 <span style="font-size:16px;">
-                    <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_sp['image'] ?>" style="width: 230px;height:230px;border-width: 1px; border-style: solid;">
+                    <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_sp['image'] ?>" style="width: 70%;border-width: 1px; border-style: solid;">
                 </span>
             </p>
             <p style="text-align: center;">
@@ -59,7 +59,7 @@
             <h4 style="text-align:center;"><?php if($lan=='en') echo $msg_from_io['nameen']; else echo $msg_from_io['name'];?></h4>      
             <p style="text-align: center;">
                 <span style="font-size:16px;">
-                    <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_io['image'] ?>" style="width: 230px;height:230px;border-width: 1px; border-style: solid;">
+                    <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_io['image'] ?>" style="width: 70%;border-width: 1px; border-style: solid;">
                 </span>
             </p>
             <p style="text-align: center;">
