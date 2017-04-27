@@ -40,7 +40,7 @@ define('MSG_FROM_DG', 274);
 define('MSG_FROM_SPOKEPERSON', 552);
 
 define('NEWS_AND_EVENTS', 574);
-define('NOTICE', 579);
+define('NOTICE', 'notice');
 define('PRESS_RELEASE', 561);
 define('BULLETIN', 580);
 define('HOT_NEWS', 581);

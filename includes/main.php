@@ -56,6 +56,22 @@
         
         <!-- Samachar and Suchana starts here -->
         <div class="panel panel-primary">
+            <?php $url = $groups->getByURLName(NOTICE); //$url=$conn->fetchArray($url);?>
+            <div class="panel-heading"><h3><?php if($lan=='en') echo $url['nameen']; else echo $url['name'] ?></h3></div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <?php $news = $groups->getByParentIdWithLimit($url['id'], 6);
+                    while($row = $conn->fetchArray($news)){?>
+                      <li class="list-group-item"><a href="<?php echo $row['urlname']; ?>"><?php echo $row['name']; ?></a></li>
+                    <?php }?>
+                </ul>
+            </div>
+            <div class="panel-footer">
+                <a href="<?php if($lan=='en') echo 'en/'; echo $url['urlname'] ?>" class="pull-right">थप [+] <i class="fa fa-chevron-right"></i></a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- <div class="panel panel-primary">
             <?php $notice = $groups->getById(NOTICE); $notice=$conn->fetchArray($notice); ?>
             <div class="panel-heading"><h3><?php if($lan=='en') echo $notice['nameen']; else echo $notice['name'];?></h3></div>
             <div class="panel-body notice-block">
@@ -65,7 +81,7 @@
                 <a href="<?php if($lan=='en') echo 'en/'; echo $notice['urlname'] ?>" class="pull-right">थप [+] <i class="fa fa-chevron-right"></i></a>
                 <div class="clearfix"></div>
             </div>
-        </div><!--samachar and suchana ends here-->
+        </div> --><!--samachar and suchana ends here-->
 
   </div>
     <!-- middle bar end -->
