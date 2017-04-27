@@ -20,7 +20,7 @@
 			            <thead>
 			                <tr>
 			                	<?php $submenu=$conn->fetchArray($sub);
-			                	if($submenu['linkType']=='Normal Group' or $submenu['linkType']=='Contents Page'){?>
+			                	if($submenu['linkType']=='Normal Group' or $submenu['linkType']=='Contents Page' or $submenu['linkType']=='List'){?>
 					                <th width="10%">SN</th>
 					                <th width="90%">Submenu</th>
 			                	<?php }
@@ -38,7 +38,7 @@
 			            <tbody>
 			            	<?php 
 			            	$down=$groups->getByParentId($pageId);
-							if($submenu['linkType']=='Normal Group' or $submenu['linkType']=='Contents Page'){
+							if($submenu['linkType']=='Normal Group' or $submenu['linkType']=='Contents Page' or $submenu['linkType']=='List'){
 								$count=1;
 								while($downRow=$conn->fetchArray($down))
 								{?>
