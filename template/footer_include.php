@@ -18,6 +18,10 @@
                         सर्वाधिकार @ <?php echo date('Y'); ?>   वातावरण विभाग | निर्माण तथा परिमार्जन: <a href="http://www.krishighar.com/" style="color:#fff">कृषिघर परिवार</a>
                     <?php }?>
                 </small>
+                <div class="visitors">
+                    <?php include "count.php"; ?>
+                    <h4>Visitors: <?php echo $dat;?></h4>
+                </div>
                 <ul class="social pull-right col-md-6 col-sm-12 col-xs-12">
                     <li>
                         <a href="https://twitter.com/DoEnv_Nepal?ref_src=twsrc%5Etfw&ref_url=http%3A%2F%2Fdoenv.gov.np%2Fhome" ><i class="fa fa-twitter"></i></a>

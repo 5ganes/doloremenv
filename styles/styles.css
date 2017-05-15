@@ -1811,6 +1811,11 @@ background-color: #0e6330 !important;
   display: block;
 }
 
+.copyright{width: 33%;}
+.social{width: 33%;}
+
+.visitors{float: left; width: 33%; text-align: center;}
+
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   .wrapper {
