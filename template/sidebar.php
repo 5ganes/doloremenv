@@ -6,7 +6,7 @@
         <h4 style="text-align:center;"><?php if($lan=='en') echo $msg_from_dg['nameen']; else echo $msg_from_dg['name'];?></h4>      
         <p style="text-align: center;">
             <span style="font-size:16px;">
-                <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_dg['image'] ?>" style="width: 70%;border-width: 1px; border-style: solid;">
+                <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_dg['image'] ?>" style="width: 140px;height:150px;border-width: 1px; border-style: solid;">
             </span>
         </p>
         <p style="text-align: center;">
@@ -43,7 +43,7 @@
             <h4 style="text-align:center;"><?php if($lan=='en') echo $msg_from_sp['nameen']; else echo $msg_from_sp['name'];?></h4>      
             <p style="text-align: center;">
                 <span style="font-size:16px;">
-                    <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_sp['image'] ?>" style="width: 70%;border-width: 1px; border-style: solid;">
+                    <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_sp['image'] ?>" style="width: 140px;height:150px;border-width: 1px; border-style: solid;">
                 </span>
             </p>
             <p style="text-align: center;">
@@ -59,7 +59,7 @@
             <h4 style="text-align:center;"><?php if($lan=='en') echo $msg_from_io['nameen']; else echo $msg_from_io['name'];?></h4>      
             <p style="text-align: center;">
                 <span style="font-size:16px;">
-                    <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_io['image'] ?>" style="width: 70%;border-width: 1px; border-style: solid;">
+                    <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_io['image'] ?>" style="width: 140px;height:150px;border-width: 1px; border-style: solid;">
                 </span>
             </p>
             <p style="text-align: center;">
@@ -72,28 +72,13 @@
         </div>
     </div>
 
-    <!--audio and video block starts here-->
-        <div class="blockmenu">
-            <a href="<?php if($lan=='en') echo 'en/';?>our-audios">
-                <span class="block-icon">&#xf1c7;</span>
-                <div class="block-content">
-                    <div class="block-content-title" style="font-size:18px">
-                      <?php if($lan=='en') echo 'Our Audios Files'; else echo 'हाम्रो अडियो फाइलहरु';?>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="blockmenu">
-            <a href="<?php if($lan=='en') echo 'en/';?>our-videos">
-                <span class="block-icon">&#xf1c8;</span>
-                <div class="block-content">
-                    <div class="block-content-title" style="font-size:18px">
-                      <?php if($lan=='en') echo 'Our Video Files'; else echo 'हाम्रो भिडियो फाइलहरु';?>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <!--audio and video block ends here-->
+    <!--facebook block starts here-->
+    <div>
+      <!-- <a class="twitter-timeline" data-width="520" data-height="350" data-theme="light" data-link-color="#981CEB" href="https://twitter.com/DoEnv_Nepal">Tweets by DoEnv_Nepal</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdoenv%2F&tabs=timeline&width=250&height=250&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="250" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+    </div>
+    <!--facebook block ends here-->
          
 </div>
 <!-- sidebar left end -->
