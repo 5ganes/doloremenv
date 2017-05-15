@@ -71,27 +71,29 @@
             </div>
         </div>
     </div>
-    
-    <!--//events-->                    
-    <!--<div class="block ">
-      <p> <a href="http://www.mope.gov.np/ne/contact.php" style="color: #fff;">गुनासो/सुझाव</a></p>	
-    </div>
-    <div class="block ">
-      <p> <a href="http://www.climatenepal.org.np/main/?p=home" style="color: #fff;"> जलवायु परिवर्तन पोर्टल </a></p>
-    </div>
-    <div class="block ">
-      <p> <a href="http://10.1.15.10/index.php" style="color: #fff; font-size:15px;">Gateway Management System</a></p>		
-    </div>
-    <div class="block ">
-      <p> <a href="http://moste.gov.np/nomination" style="color: #fff;">Nomination Management Information System</a></p>
-    </div>
-    <div class="block ">
-      <p> <a href="http://www.mope.gov.np/ne/downloads.php" style="color: #fff;">संग्रह / डाउनलोड</a></p>		
-    </div>
-    <div class="block ">
-      <p> <a href="http://www.climatenepal.org.np/main/?p=discuss" style="color: #fff;">छलफल चौतारी</a></p>		
-    </div>-->
-    <!-- events end -->
+
+    <!--audio and video block starts here-->
+        <div class="blockmenu">
+            <a href="<?php if($lan=='en') echo 'en/';?>our-audios">
+                <span class="block-icon">&#xf1c7;</span>
+                <div class="block-content">
+                    <div class="block-content-title" style="font-size:18px">
+                      <?php if($lan=='en') echo 'Our Audios Files'; else echo 'हाम्रो अडियो फाइलहरु';?>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="blockmenu">
+            <a href="<?php if($lan=='en') echo 'en/';?>our-videos">
+                <span class="block-icon">&#xf1c8;</span>
+                <div class="block-content">
+                    <div class="block-content-title" style="font-size:18px">
+                      <?php if($lan=='en') echo 'Our Video Files'; else echo 'हाम्रो भिडियो फाइलहरु';?>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!--audio and video block ends here-->
          
 </div>
 <!-- sidebar left end -->

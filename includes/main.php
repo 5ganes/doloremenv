@@ -88,12 +88,30 @@
 
     <!-- right sidebar starts here -->
     <div class="col-md-4" style="padding-right: 5px;">
+        
+        <div class="panel-body" style="padding:0 !important; border-bottom: 1px solid #ccc; ">
+            <?php $msg_from_ddg = $groups->getById(MSG_FROM_DDG); $msg_from_ddg = $conn->fetchArray($msg_from_ddg);?>
+            <h4 style="text-align:center;"><?php if($lan=='en') echo $msg_from_ddg['nameen']; else echo $msg_from_ddg['name'];?></h4>      
+            <p style="text-align: center;">
+                <span style="font-size:16px;">
+                    <img alt="" src="<?php echo CMS_GROUPS_DIR.$msg_from_ddg['image'] ?>" style="width: 70%;border-width: 1px; border-style: solid;">
+                </span>
+            </p>
+            <p style="text-align: center;">
+                <?php if($lan=='en') echo $msg_from_ddg['shortcontentsen']; else echo $msg_from_ddg['shortcontents'];?>...
+            </p>                                                
+            <div class="panel-footer">
+                <a href="<?php if($lan=='en') echo 'en/'; echo $msg_from_ddg['urlname'] ?>" class="pull-right">थप [+] <i class="fa fa-chevron-right"></i></a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
         <section class="links panel panel-primary">
             <div class="panel-heading">
               <h3><?php if($lan=='en') echo 'Important Links'; else echo 'महत्वपुर्ण लिंकहरु';?></h3>
             </div>
             <div class="section-content panel-body important-links">
-                <?php $links = $groups->getByParentIdAndType(0, 'Important_Links');
+                <?php $links = $groups->getByParentIdAndTypeWithLimit('Important_Links', 0, 5);
                 while($row = $conn->fetchArray($links)){?>
                   <p>
                     <a href="<?php if($lan=='en') echo 'en/'; echo $row['urlname'];?>" target="_blank">
@@ -102,7 +120,10 @@
                   </p>
                 <?php }?>
             </div><!--//section-content-->
-            <!--<div class="panel-footer"><a class="read-more" href="">थप [+]<i class="fa fa-chevron-right"></i></a></div>-->
+            <div class="panel-footer">
+                <a href="<?php if($lan=='en') echo 'en/'; echo 'important-links' ?>" class="pull-right">थप [+] <i class="fa fa-chevron-right"></i></a>
+                <div class="clearfix"></div>
+            </div>
         </section>
         <!-- sambandhit links end here -->
 
@@ -134,7 +155,7 @@
               <a href="http://pollution.gov.np/" target="_blank">
                   <span class="block-icon"></span>
                   <div class="block-content">
-                   <div class="block-content-title" style="font-size:16px">DOE, Air Quality Monitoring</div>
+                   <div class="block-content-title" style="font-size:16px">DOEnv, Air Quality Monitoring</div>
                    <p style="color:#fff; font-size:12p;">&nbsp;&nbsp;&nbsp; www.polution.gov.np</p>
                   </div>
               </a>
@@ -159,28 +180,7 @@
         </div>
         <!--twitter block ends here-->
 
-        <!--audio and video block starts here-->
-        <div class="blockmenu">
-            <a href="<?php if($lan=='en') echo 'en/';?>our-audios">
-                <span class="block-icon">&#xf1c7;</span>
-                <div class="block-content">
-                    <div class="block-content-title" style="font-size:18px">
-                      <?php if($lan=='en') echo 'Our Audios Files'; else echo 'हाम्रो अडियो फाइलहरु';?>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="blockmenu">
-            <a href="<?php if($lan=='en') echo 'en/';?>our-videos">
-                <span class="block-icon">&#xf1c8;</span>
-                <div class="block-content">
-                    <div class="block-content-title" style="font-size:18px">
-                      <?php if($lan=='en') echo 'Our Video Files'; else echo 'हाम्रो भिडियो फाइलहरु';?>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <!--audio and video block ends here-->
+        
         
         <div class="panel panel-primary">
           <?php $contact = $groups->getByURLName(CONTACT); ?>

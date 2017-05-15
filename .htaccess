@@ -14,12 +14,15 @@ RewriteRule ^en/contact-us index.php?action=contact-us&lan=en [L]
 RewriteRule ^en/our-audios index.php?action=audios&lan=en [L]
 RewriteRule ^en/our-videos index.php?action=videos&lan=en [L]
 RewriteRule ^en/photo-gallery index.php?action=photo_gallery&lan=en [L]
+RewriteRule ^en/important-links index.php?action=important_links&lan=en [L]
 RewriteRule ^en/([-A-Za-z0-9]+)$ index.php?lan=en&query=$1 [L]
 RewriteRule ^en$ index.php?lan=en [L]
 
 RewriteRule photo-gallery index.php?action=photo_gallery [L]
 
 RewriteRule ^video-gallery index.php?action=video_gallery [L]
+
+RewriteRule ^important-links index.php?action=important_links [L]
 
 RewriteRule ^forgotpassword index.php?action=forgot_password [L]
 RewriteRule ^home index.php [L]

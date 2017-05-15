@@ -1792,6 +1792,25 @@ background-color: #0e6330 !important;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
+
+.language{
+  margin-top: 40%;float: left;
+}
+.nepal-flag{float: right;}
+.logo div:first-child img{width: 110px}
+
+.marquee_div{
+  padding: 7px 10px 7px; display: flex;
+}
+.marquee-title{width: 10%;color: white;font-weight: bold;padding: 0.1% 1%;
+  /*background: #0c4380;*/
+  background: #0e6330;
+  margin-right: 1%;
+}
+.marquee_div marquee a{
+  display: block;
+}
+
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   .wrapper {
@@ -1812,11 +1831,11 @@ background-color: #0e6330 !important;
     text-align: center;
   }
 .flag {
-  display:none;
+  /*display:none;*/
   }
   .center-text p {
-	font-size:13px !important;
-}
+	 font-size:13px !important;
+  }
   .center-text h3 {
 	font-size:22px !important;
 }
@@ -1983,6 +2002,27 @@ background-color: #0e6330 !important;
   .home-page .course-finder .keywords input {
     float: left !important;
   }
+  .language {
+    margin: 3%;
+    float: none;
+    text-align: center;
+  }
+  .nepal-flag {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-nav li{padding: 2%;text-align: center;}
+  .main-nav .nav .nav-item a{border-right: none;}
+
+  .marquee_div{flex-direction: column;}
+  .marquee-title {
+    width: 100%;
+    padding: 2.1% 0%;
+    text-align: center;
+    font-size: 20px;
+  }
+  .marquee_div marquee{width: 100%;padding: 2%;font-size: 20px;}
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -2526,21 +2566,6 @@ box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.75);
 .block p {
 	padding:5px;
 	margin:3px;
-}
-
-.language{
-  margin-top: 6%;
-}
-.marquee_div{
-  padding: 7px 10px 7px; display: flex;
-}
-.marquee-title{width: 8%;color: white;font-weight: bold;padding: 0.1% 1%;
-  /*background: #0c4380;*/
-  background: #0e6330;
-  margin-right: 1%;
-}
-.marquee_div marquee a{
-  display: block;
 }
 
 .email a img{

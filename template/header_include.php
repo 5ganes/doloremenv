@@ -18,24 +18,34 @@
                   <?php }?>
                   <!--<p>सिंहदरबार, काठमाडौँ, नेपाल</p>-->
               </div>
-              <div class="col-md-2 flag" align="right"><img src="images/flagrr.gif" width="60"></div>
+              <div class="col-md-2 flag" align="right">
+                <div class="language">
+                  <div class="container" style="width:100% !important;">
+                      <?php if($lan=='en'){?>
+                        <a href="<?php echo SITE_URL;?>" class="btn btn-sm btn-primary pull-right"><span style="font-size:12px;"><b>नेपाली</b></span></a>
+                      <?php }
+                      else{?>
+                        <a href="<?php echo SITE_URL;?>en" class="btn btn-sm btn-primary pull-right"><span style="font-size:12px;"><b>English</b></span></a>
+                      <?php }?>
+                  </div>      
+              </div>
+                <div class="nepal-flag"><img src="images/flagrr.gif" width="70"></div>
+              </div>
           </h1>           
-      </div>
-      <div class="language">
-          <div class="container" style="width:100% !important;">
-              <?php if($lan=='en'){?>
-                <a href="<?php echo SITE_URL;?>" class="btn btn-sm btn-primary pull-right"><span style="font-size:12px;"><b>नेपाली</b></span></a>
-              <?php }
-              else{?>
-                <a href="<?php echo SITE_URL;?>en" class="btn btn-sm btn-primary pull-right"><span style="font-size:12px;"><b>English</b></span></a>
-              <?php }?>
-          </div>      
       </div>
   </header><!--//header-->
 
   <!-- ******NAV****** -->
   <nav class="main-nav container" role="navigation">
-      <div class="">         
+      <div class="">
+          <div class="navbar-header">
+              <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button><!--//nav-toggle-->
+          </div>         
           <div class="navbar-collapse collapse" id="navbar-collapse">
             <ul class="nav navbar-nav">
                 <?php createMenu(0, 'Header', $lan); ?>

@@ -22,6 +22,9 @@
             <li>
               <a href="cms.php?id=<?php echo MSG_FROM_SPOKEPERSON;?>&parentId=0&groupType=Other">Message From Spoke Pserson</a>
             </li>
+            <li>
+              <a href="cms.php?id=<?php echo MSG_FROM_DDG;?>&parentId=0&groupType=Other">Message From DDG</a>
+            </li>
             <li><a href="cms.php?id=362&parentId=0&groupType=Other">Information Officer</a></li>
             <li><a href="cms.php?id=581&parentId=0&groupType=Other">Hot News</a></li>
             <!-- li><a href="cms.php?id=367&parentId=0&groupType=Other">Photo Gallery</li> -->
