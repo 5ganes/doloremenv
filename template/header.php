@@ -41,6 +41,7 @@
         <script id="facebook-jssdk" src="scripts/sdk.js"></script>
         <script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" charset="utf-8" async="" src="scripts/timeline.619317855a58aa2366562a395f9e40ef.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
 	</head>
 	<body class="home-page">
     	<div class="wrapper">

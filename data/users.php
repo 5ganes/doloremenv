@@ -4,24 +4,21 @@ class Users
  function validate($uname,$pswd)
  {
  	global $conn;
-	
-  $sql = "SELECT * FROM users u where md5(u.username) = '". md5(cleanQuery($uname)). "' AND md5(u.password) = '". md5(cleanQuery($pswd)) ."' AND u.status = 'A'";
-  //echo $sql;
-  $result = $conn -> exec($sql);
-  $numRows = $conn -> numRows($result);
-  if($numRows)
-  {
-   $row = $conn -> fetchArray($result);
-   $_SESSION['sessUserId'] = $row['id'];
-   $_SESSION['sessUsername'] = $row['username'];
-   $_SESSION['sessLastLogin'] = $row['lastLogin'];
-
-   return true;
-  }
-  else
-  {
-   return false;
-  }
+	$sql = "SELECT * FROM users u where md5(u.username) = '". md5(cleanQuery($uname)). "' AND md5(u.password) = '". md5(cleanQuery($pswd)) ."' AND u.status = 'A'";
+  	//echo $sql;
+  	$result = $conn -> exec($sql);
+  	$numRows = $conn -> numRows($result);
+  	if($numRows)
+  	{
+   		$row = $conn -> fetchArray($result);
+   		$_SESSION['sessUserId'] = $row['id'];
+   		$_SESSION['sessUsername'] = $row['username'];
+   		$_SESSION['sessLastLogin'] = $row['lastLogin'];
+		return true;
+  	}
+  	else{
+   		return false;
+  	}
  }
  
  function validateUser($uname,$pswd)
@@ -106,21 +103,18 @@ class Users
 		return 10;	 
  }
  
- function saveUser($id, $name, $username, $password, $district, $email, $phone, $website, $user_type, $org_info, $publish, $weight)
+ function saveUser($id, $name, $address, $email, $phone, $username, $password, $publish, $weight='')
 	{
 		global $conn;
 		$id = cleanQuery($id);
 		$name = cleanQuery($name);
+		$address = cleanQuery($address);
 		$username = cleanQuery($username);
 		$password = cleanQuery($password);
-		$district = cleanQuery($district);
 		$email=cleanQuery($email);
 		$phone=cleanQuery($phone);
-		$website=cleanQuery($website);
-		$user_type = cleanQuery($user_type);
-		$org_info=cleanQuery($org_info);
 		$publish=cleanQuery($publish);
-		$weight=cleanQuery($weight);
+		if($weight=='') $weight=$this->getSubLastWeight();
 		if($id > 0)
 		$sql = "UPDATE usergroups
 						SET
@@ -138,7 +132,17 @@ class Users
 						WHERE
 							id = '$id'";
 		else
-		$sql = "INSERT INTO usergroups SET name = '$name',username = '$username',password = '$password',district = '$district',email = '$email',phone='$phone',website='$website',user_type = '$user_type',org_info = '$org_info',publish = '$publish',weight = '$weight'";
+		$sql = "INSERT INTO usergroups 
+					SET 
+						name = '$name',
+						address = '$address',
+						username = '$username',
+						password = '$password',
+						email = '$email',
+						phone='$phone',
+						publish = '$publish',
+						weight = '$weight',
+						onDate = NOW()";
 		//echo $sql; die();
 		$conn->exec($sql);
 		if($id > 0)
@@ -214,7 +218,7 @@ class Users
 	{
 		global $conn;
 		
-		$sql = "SELECT * FROM usergroups WHERE username='$uname' AND password='$pswd'";
+		$sql = "SELECT * FROM usergroups WHERE username='$uname' AND password='$pswd' and publish='Yes'";
 	  	//echo $sql;
 	  	$result = $conn -> exec($sql);
 	  	$numRows = $conn -> numRows($result);
@@ -345,6 +349,25 @@ class Users
 		return $result;
 	}
 	
+	function checkDuplicateUser($username){
+		global $conn;
+		$sql = "SELECT * FROM usergroups where username='$username'";
+	  	$result = $conn -> exec($sql);
+	  	$numRows = $conn -> numRows($result);
+	  	if($numRows==1) return false;
+	  	else return true;
+	}
+
+	function changeStatus($id){
+		global $conn;
+		$sql = "SELECT * FROM usergroups where id='$id'";
+	  	$result = $conn -> exec($sql);
+	  	$row = $conn -> fetchArray($result);
+	  	if($row['publish']=='Yes') $publish = 'No'; else $publish = 'Yes';
+	  	$sql = "update usergroups set publish='$publish' where id='$id'";
+	  	// die($sql);
+	  	$conn->exec($sql);
+	}
 	
 }
 ?>

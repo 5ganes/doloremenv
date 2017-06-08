@@ -37,6 +37,9 @@ include("includes/feedbackprocess.php");
 include("includes/testimonialprocess.php");
 include("includes/enquiry.php");
 
+require_once('data/loginuserprocess.php');
+require_once('data/checkloggedin.php');
+
 ///////////////////////////////////////////////
 
 $query = "";

@@ -15,10 +15,23 @@ RewriteRule ^en/our-audios index.php?action=audios&lan=en [L]
 RewriteRule ^en/our-videos index.php?action=videos&lan=en [L]
 RewriteRule ^en/photo-gallery index.php?action=photo_gallery&lan=en [L]
 RewriteRule ^en/important-links index.php?action=important_links&lan=en [L]
+RewriteRule ^en/usersignup index.php?action=usersignup&lan=en [L]
+RewriteRule ^en/userlogin index.php?action=userlogin&lan=en [L]
+RewriteRule ^en/our_documents index.php?action=our_documents&lan=en [L]
+
+#RewriteRule ^en/userlogout.php userlogout.php?lan=en [L]
+
 RewriteRule ^en/([-A-Za-z0-9]+)$ index.php?lan=en&query=$1 [L]
 RewriteRule ^en$ index.php?lan=en [L]
 
+
+RewriteRule ^usersignup index.php?action=usersignup [L]
+RewriteRule ^userlogin index.php?action=userlogin [L]
+
 RewriteRule photo-gallery index.php?action=photo_gallery [L]
+
+#our_documents
+RewriteRule ^our_documents index.php?action=our_documents [L]
 
 RewriteRule ^video-gallery index.php?action=video_gallery [L]
 

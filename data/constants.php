@@ -56,7 +56,7 @@ define('MSG_FROM_DDG', 751);
 
 
 ////////////////LINKS AND PAGE TYPES////////////////////////
-$groupTypesArray = array("Header", "Navigation", "Important_Links", "Other");
+$groupTypesArray = array("Header", "Navigation", "Important_Links", "Our_Documents", "Other");
 
 $linkTypesArray = array("Normal Group", "Link", "File", "Contents Page", "Gallery", "List", "Video Gallery");
 

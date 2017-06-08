@@ -1802,7 +1802,7 @@ background-color: #0e6330 !important;
 .marquee_div{
   padding: 7px 10px 7px; display: flex;
 }
-.marquee-title{width: 10%;color: white;font-weight: bold;padding: 0.1% 1%;
+.marquee-title{width: 12%;color: white;font-weight: bold;padding: 0.1% 1%;
   /*background: #0c4380;*/
   background: #0e6330;
   margin-right: 1%;
@@ -2301,6 +2301,23 @@ border-bottom-left-radius: 10px;
 .marquee-body .marquee_div a:last-child {
 	border:none;
 }
+
+.login{margin-right: 0;margin-left: 1%;}
+.login a:hover{ color: #350808; }
+.login a{width: 100%;}
+
+.login-form{text-align: center;padding: 10% 0;}
+.login-form fieldset{padding: 1%;}
+.login-form fieldset input{padding: 0 1%; width: 20%;}
+.login-form fieldset input[type="submit"]{width: 80px; text-align: left;}
+.notamember a{font-weight: bold;}
+
+.signup-form{padding: 0;text-align: left;}
+.signup-form fieldset label{width: 20%;}
+.signup-form fieldset input[type="text"], .signup-form fieldset input[type="password"], .signup-form fieldset input[type="email"]{width: 70%;}
+
+.border-red{border:1px solid;}
+
 .notice .panel-body a {
 	display:block;
 	border-bottom:1px #ccc solid;
@@ -2664,3 +2681,7 @@ box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.75);
 #contact_us div p{
   margin-bottom: 0;font-weight: bold;
 }
+
+.login-message{display: flex;}
+.login-message h3{justify-content: space-between; width: 50%;}
+.login-message h3:last-child{color: red; text-align: right;}
