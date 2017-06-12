@@ -151,7 +151,7 @@
     
         <div align="center">
             <div class="clearfix"></div>
-            <div class="blockmenu" style="background-color:#0e6330">
+            <div class="blockmenu" style="background-color:#0e6330;height: 100px;">
               <a href="http://pollution.gov.np/" target="_blank">
                   <span class="block-icon"></span>
                   <div class="block-content">
