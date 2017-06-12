@@ -3,3 +3,23 @@
 [11-Jul-2016 07:46:34 UTC] PHP Warning:  imagecreatefromjpeg(../pics/noimage.jpg): failed to open stream: No such file or directory in /home/doasoilg/public_html/data/imager.php on line 61
 [11-Jul-2016 07:46:34 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/doasoilg/public_html/data/imager.php on line 69
 [11-Jul-2016 07:46:34 UTC] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/doasoilg/public_html/data/imager.php on line 105
+[13-Apr-2017 07:34:23] PHP Warning:  getimagesize(../pics/noimage.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: No such file or directory in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 17
+[13-Apr-2017 07:34:23] PHP Warning:  Division by zero in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 30
+[13-Apr-2017 07:34:23] PHP Warning:  imagecreatefromjpeg(../pics/noimage.jpg) [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: failed to open stream: No such file or directory in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 61
+[13-Apr-2017 07:34:23] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 69
+[13-Apr-2017 07:34:23] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 105
+[30-Apr-2017 04:40:26] PHP Warning:  getimagesize(../pics/noimage.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: No such file or directory in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 17
+[30-Apr-2017 04:40:26] PHP Warning:  Division by zero in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 30
+[30-Apr-2017 04:40:26] PHP Warning:  imagecreatefromjpeg(../pics/noimage.jpg) [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: failed to open stream: No such file or directory in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 61
+[30-Apr-2017 04:40:26] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 69
+[30-Apr-2017 04:40:26] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 105
+[30-Apr-2017 04:40:26] PHP Warning:  getimagesize(../pics/noimage.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: No such file or directory in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 17
+[30-Apr-2017 04:40:26] PHP Warning:  Division by zero in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 30
+[30-Apr-2017 04:40:26] PHP Warning:  imagecreatefromjpeg(../pics/noimage.jpg) [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: failed to open stream: No such file or directory in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 61
+[30-Apr-2017 04:40:26] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 69
+[30-Apr-2017 04:40:26] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 105
+[30-Apr-2017 04:42:12] PHP Warning:  getimagesize(../pics/noimage.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: No such file or directory in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 17
+[30-Apr-2017 04:42:12] PHP Warning:  Division by zero in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 30
+[30-Apr-2017 04:42:12] PHP Warning:  imagecreatefromjpeg(../pics/noimage.jpg) [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: failed to open stream: No such file or directory in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 61
+[30-Apr-2017 04:42:12] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 69
+[30-Apr-2017 04:42:12] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home/krishwt5/public_html/doenv.gov.np/data/imager.php on line 105

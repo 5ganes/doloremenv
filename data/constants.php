@@ -48,7 +48,7 @@ define('SINGLE_VIDEO', 582);
 define('AUDIO', 585);
 define('VIDEO', 601);
 define('ABOUT', 338);
-define('MSG_FROM_DDG', 751);
+define('MSG_FROM_DDG', 827);
 
 ///////////////GENERAL CLIENT SIDE CONSTANTS///////////////////
 
