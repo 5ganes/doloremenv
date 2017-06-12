@@ -155,8 +155,7 @@
               <a href="http://pollution.gov.np/" target="_blank">
                   <span class="block-icon"></span>
                   <div class="block-content">
-                   <div class="block-content-title" style="font-size:16px">DOEnv, Air Quality Monitoring</div>
-                   <p style="color:#fff; font-size:12p;">&nbsp;&nbsp;&nbsp; www.polution.gov.np</p>
+                   <div class="block-content-title" style="font-size:16px">DOEnv, Air Quality Monitoring, polution.gov.np</div>
                   </div>
               </a>
             </div>
