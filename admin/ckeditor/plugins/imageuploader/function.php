@@ -8,7 +8,7 @@ if(isset($_GET["f"])){
 }
 
 function loadImages() {
-    require(__DIR__ . '/pluginconfig.php');
+    require('pluginconfig.php');
     
     if(file_exists($useruploadpath)){
         
@@ -92,7 +92,7 @@ function loadImages() {
 }
 
 function pathHistory() {
-    require(__DIR__ . '/pluginconfig.php');
+    require('pluginconfig.php');
     $latestpathes = array_slice($foldershistory, -3);
     $latestpathes = array_reverse($latestpathes);
     foreach($latestpathes as $folder) {

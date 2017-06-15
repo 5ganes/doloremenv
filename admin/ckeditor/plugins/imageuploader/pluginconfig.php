@@ -10,10 +10,10 @@ if(isset($_COOKIE['sy_lang'])) {
 // including lang files
 switch ($load_lang_code) {
     case "en":
-        require(__DIR__ . '/lang/en.php');
+        require('lang/en.php');
         break;
     case "pl":
-        require(__DIR__ . '/lang/pl.php');
+        require('lang/pl.php');
         break;
 }
 
@@ -31,7 +31,7 @@ if(isset($_SESSION['username'])){
     $useruploadpath = $usersiteroot."$useruploadfolder/";
     $foldershistory[] = "'.$newpath.'";
         '.PHP_EOL;
-        $fp = fopen(__DIR__ . '/pluginconfig.php', 'a');
+        $fp = fopen('pluginconfig.php', 'a');
         fwrite($fp, $data);
     }
     

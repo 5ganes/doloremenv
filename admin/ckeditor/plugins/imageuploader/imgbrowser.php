@@ -1,13 +1,9 @@
-
 <?php
 session_start();
 ?>
-
 <!-- Copyright (c) 2015, Fujana Solutions - Moritz Maleck. All rights reserved. -->
 <!-- For licensing, see LICENSE.md -->
-
 <?php
-
 // Don't remove the following two rows
 $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $root = "http://$_SERVER[HTTP_HOST]";
@@ -22,19 +18,19 @@ if(isset($_COOKIE['sy_lang'])) {
 // including lang files
 switch ($load_lang_code) {
     case "en":
-        require(__DIR__ . '/lang/en.php');
+        require('lang/en.php');
         break;
     case "pl":
-        require(__DIR__ . '/lang/pl.php');
+        require('lang/pl.php');
         break;
 }
 
 // Including the plugin config file, don't delete the following row!
-require(__DIR__ . '/pluginconfig.php');
+require('pluginconfig.php');
 // Including the functions file, don't delete the following row!
-require(__DIR__ . '/function.php');
+require('function.php');
 // Including the check_permission file, don't delete the following row!
-require(__DIR__ . '/check_permission.php');
+require('check_permission.php');
 
 $_SESSION["username"] = "disabled_pw";
 // if ($username == "" and $password == "") {
@@ -262,7 +258,7 @@ $_SESSION["username"] = "disabled_pw";
     
 <?php   
 // Including the language file, don't delete the following row!
-require(__DIR__ . '/lang/lang.php');
+require('lang/lang.php');
 ?>
 
 </body>

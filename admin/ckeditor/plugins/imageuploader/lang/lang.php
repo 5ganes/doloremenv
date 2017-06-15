@@ -21,10 +21,10 @@ if(isset($_COOKIE['sy_lang'])) {
 // including lang files
 switch ($load_lang_code) {
     case "en":
-        require(__DIR__ . '/en.php');
+        require('en.php');
         break;
     case "pl":
-        require(__DIR__ . '/pl.php');
+        require('pl.php');
         break;
 }
 ?>
