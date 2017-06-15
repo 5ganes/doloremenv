@@ -5,14 +5,14 @@
       <div class="header-main">
           <h1 class="logo">
               <div class="col-md-2 "><a href="<?php echo SITE_URL;?>"><img src="images/logo.png" width=""></a></div>
-              <div class="col-md-8 center-text" style="line-height: 20px;">
+              <div class="col-md-8 center-text title-text" style="line-height: 20px;">
                   <?php if($lan=='en'){?>
-                      <p style="font-size: 20px;">Government of Nepal</p>
+                      <p>Government of Nepal</p>
                       <h3>Ministry of Population and Environment</h3>
                       <p>Department of Environment</p>
                   <?php }
                   else{?>
-                      <p style="font-size: 20px;">नेपाल सरकार</p>
+                      <p>नेपाल सरकार</p>
                       <h3>जनसंख्या तथा वातावरण मन्त्रालय</h3>
                       <p>वातावरण विभाग</p>
                   <?php }?>

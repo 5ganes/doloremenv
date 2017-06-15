@@ -127,22 +127,9 @@
         </section>
         <!-- sambandhit links end here -->
 
-         <!--video link starts here-->
-        <section class="links panel panel-primary">
-            <?php $video = $groups->getById(SINGLE_VIDEO); $video = $conn->fetchArray($video); ?>
-            <div class="panel-heading">
-              <h3><?php if($lan=='en') echo $video['nameen']; else echo $video['name'];?></h3>
-            </div>
-            <div class="section-content panel-body important-links">
-                <iframe width="100%" height="200" src="<?php echo $video['contents'];?>" frameborder="0" allowfullscreen=""></iframe>
-            </div><!--//section-content-->
-            <!--<div class="panel-footer"><a class="read-more" href="">थप [+]<i class="fa fa-chevron-right"></i></a></div>-->
-        </section>
-        <!-- video links end here -->
-
         <!-- email and weather -->
         <div class="blockmenu-next email">
-          <a href="https://mail2.nitc.gov.np/src/login.php" target="_blank"><img src="images/checkmail.png"></a>
+          <a href="https://mail.doenv.gov.np/src/login.php" target="_blank"><img src="images/checkmail.png"></a>
         </div> 
         <div class="blockmenu-next weather">
             <a href="http://www.mfd.gov.np/" target="_blank"><img src="images/weather.jpg"></a>
@@ -155,7 +142,9 @@
               <a href="http://pollution.gov.np/" target="_blank">
                   <span class="block-icon"></span>
                   <div class="block-content">
-                   <div class="block-content-title" style="font-size:16px">DOEnv, Air Quality Monitoring, polution.gov.np</div>
+                   <div class="block-content-title" style="font-size:16px">
+                        Air Quality Monitoring, 
+                        <span style="font-size: 22px">pollution.gov.np</span></div>
                   </div>
               </a>
             </div>
@@ -204,7 +193,16 @@
               <a href="<?php if($lan=='en') echo 'en/'; echo $contact['urlname'] ?>" class="pull-right">थप [+] <i class="fa fa-chevron-right"></i></a>
               <div class="clearfix"></div>
           </div>
-        </div>      
+        </div>
+
+        <!--google map-->
+        <div class="panel panel-primary">
+          <div class="panel-heading"><h3 align="center"><?php echo 'Our Location';?></h3></div>
+          <div class="panel-body">   
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28265.453818308466!2d85.32074693281858!3d27.680777661147783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3730472b983aa926!2sDepartment+of+Environment!5e0!3m2!1sen!2snp!4v1497513759668" width="230" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+
     </div>
     <!-- right bar end -->
 </div>

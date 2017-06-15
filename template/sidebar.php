@@ -72,10 +72,23 @@
         </div>
     </div>
 
+    <!--video link starts here-->
+    <section class="links panel panel-primary">
+        <?php $video = $groups->getById(SINGLE_VIDEO); $video = $conn->fetchArray($video); ?>
+        <div class="panel-heading">
+          <h3><?php if($lan=='en') echo $video['nameen']; else echo $video['name'];?></h3>
+        </div>
+        <div class="section-content panel-body important-links">
+            <iframe width="100%" height="200" src="<?php echo $video['contents'];?>" frameborder="0" allowfullscreen=""></iframe>
+        </div><!--//section-content-->
+        <!--<div class="panel-footer"><a class="read-more" href="">थप [+]<i class="fa fa-chevron-right"></i></a></div>-->
+    </section>
+    <!-- video links end here -->
+
     <!--facebook block starts here-->
     <div>
       <!-- <a class="twitter-timeline" data-width="520" data-height="350" data-theme="light" data-link-color="#981CEB" href="https://twitter.com/DoEnv_Nepal">Tweets by DoEnv_Nepal</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdoenv%2F&tabs=timeline&width=250&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="250" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdoenv%2F&tabs=timeline&width=250&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="250" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
     </div>
     <!--facebook block ends here-->
