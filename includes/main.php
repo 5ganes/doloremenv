@@ -183,6 +183,21 @@
         </div>
         <!--audio and video block ends here-->
         
+        <?php global $userLoggedIn; 
+        if(!$userLoggedIn){?>
+            <!-- login tab starts here -->
+            <div class="blockmenu">
+                <a href="<?php if($lan=='en') echo 'en/';?>userlogin">
+                    <span class="block-icon">&#xf1c8;</span>
+                    <div class="block-content">
+                        <div class="block-content-title" style="font-size:18px">
+                          <?php if($lan=='en') echo 'Login'; else echo 'लगइन गर्नुहोस';?>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        <?php }?>
+
         <div class="panel panel-primary">
           <?php $contact = $groups->getByURLName(CONTACT); ?>
           <div class="panel-heading"><h3 align="center"><?php if($lan=='en') echo $contact['nameen']; else echo $contact['name'];?></h3></div>

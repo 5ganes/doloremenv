@@ -69,16 +69,19 @@
                           <?php $hot=$groups->getById(HOT_NEWS); $hot=$conn->fetchArray($hot);?>
                           <a href="<?php if($lan=='en') echo 'en/'; echo $hot['urlname'];?>"><?php if($lan=='en') echo $hot['shortcontentsen']; else echo $hot['shortcontents'];?></a>
                       </marquee>
-                      <div class="marquee-title login" style="width: 22%">
-                        <?php global $userLoggedIn; 
-                        if(!$userLoggedIn){?>
-                          <a href="<?php if($lan=='en') echo 'en/';?>userlogin"><?php if($lan=='en') echo 'Login'; else echo 'लगइन गर्नुहोस';?></a>
-                        <?php }
-                        else{ 
-                          echo 'Hello '.$_SESSION['userName'].' | '; 
-                          if($lan=='en') echo '<a style="width:40%" href="userlogout.php?lan=en">Logout</a>'; else echo '<a href="userlogout.php" style="width:40%">Logout</a>';
-                        }?>
-                      </div>
+                      <?php global $userLoggedIn;
+                      if($userLoggedIn){?>
+                          <div class="marquee-title login" style="width: 22%">
+                            <?php 
+                            //if(!$userLoggedIn){?>
+                              <!-- <a href="<?php if($lan=='en') echo 'en/';?>userlogin"><?php if($lan=='en') echo 'Login'; else echo 'लगइन गर्नुहोस';?></a> -->
+                            <?php //}
+                            //else{ 
+                              echo 'Hello '.$_SESSION['userName'].' | '; 
+                              if($lan=='en') echo '<a style="width:40%" href="userlogout.php?lan=en">Logout</a>'; else echo '<a href="userlogout.php" style="width:40%">Logout</a>';
+                            //}?>
+                          </div>
+                      <?php }?>
                   </div>
                   <div class="clearfix"></div>
               </div>    
