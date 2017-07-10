@@ -2,8 +2,8 @@
 session_start();
 error_reporting(E_ERROR);
 ini_set("register_globals", "off");
-ini_set("upload_max_filesize", "20M");
-ini_set("post_max_size", "40M");
+ini_set("upload_max_filesize", "100M");
+ini_set("post_max_size", "100M");
 ini_set("memory_limit", "80M");
 
 require_once("data/conn.php");
