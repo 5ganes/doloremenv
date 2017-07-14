@@ -4,7 +4,7 @@
     <div class="col-md-8" style="padding-left: 5px;">
         <div id="promo-slider" class="slider flexslider">
             <ul class="slides">
-                <?php $slide = $groups->getByParentId(SLIDER); $bulletCount = count($slide);
+                <?php $slide = $groups->getByParentIdWithOrder(SLIDER, 'DESC'); $bulletCount = count($slide);
                 while($slideGet = $conn->fetchArray($slide)){?>
                   <li>
                       <img src="<?php echo CMS_GROUPS_DIR.$slideGet['image']; ?>" alt="<?php echo $slideGet['shortcontents'];?>">

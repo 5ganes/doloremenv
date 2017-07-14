@@ -13,6 +13,7 @@
             <li><a href="cms.php">Manage Contents</a></li>
             <li><a href="cms.php?groupType=Header">Manage Menubar</a></li>
             <li><a href="cms.php?groupType=Navigation">Manage Navigation</a></li>
+            <li><a href="cms.php?id=723&parentId=0&groupType=Other">Manage Slider</a></li>
             <li><a href="cms.php?groupType=Important_Links">Manage Important Links</a></li>
             <!-- <li><a href="cms.php?id=8&parentId=0&groupType=Other">Slider</a></li> -->
             <!-- <li><a href="cms.php?parentId=241&groupType=Other&open">Information Categories</a></li> -->

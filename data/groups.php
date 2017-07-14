@@ -772,6 +772,19 @@ class Groups
 		
 		return $result;
 	}
+
+	function getByParentIdWithOrder($parentId, $order)
+	{
+		global $conn;
+		
+		$parentId = cleanQuery($parentId);
+		
+		$sql = "SElECT * FROM groups WHERE parentId = '$parentId' ORDER BY id $order";
+		// echo $sql; die();
+		$result = $conn->exec($sql);
+		
+		return $result;
+	}
 	
 	function getByParentIdAndType($id, $type)
 	{
