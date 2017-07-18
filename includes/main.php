@@ -42,7 +42,7 @@
             <div class="panel-heading"><h3><?php if($lan=='en') echo $url['nameen']; else echo $url['name'] ?></h3></div>
             <div class="panel-body">
                 <ul class="list-group">
-                    <?php $news = $groups->getByParentIdWithLimit(NEWS_AND_EVENTS, 6);
+                    <?php $news = $groups->getByParentIdWithOrderWithLimit(NEWS_AND_EVENTS, 'id', 'DESC', 6);
                     while($row = $conn->fetchArray($news)){?>
                       <li class="list-group-item"><a href="<?php echo $row['urlname']; ?>"><?php echo $row['name']; ?></a></li>
                     <?php }?>
@@ -60,7 +60,7 @@
             <div class="panel-heading"><h3><?php if($lan=='en') echo $url['nameen']; else echo $url['name'] ?></h3></div>
             <div class="panel-body">
                 <ul class="list-group">
-                    <?php $news = $groups->getByParentIdWithLimit($url['id'], 6);
+                    <?php $news = $groups->getByParentIdWithOrderWithLimit($url['id'], 'id', 'DESC', 6);
                     while($row = $conn->fetchArray($news)){?>
                       <li class="list-group-item"><a href="<?php echo $row['urlname']; ?>"><?php echo $row['name']; ?></a></li>
                     <?php }?>

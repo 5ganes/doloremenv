@@ -161,6 +161,7 @@ if (isset($_GET['id']))
       <td valign="top">Title</td>
       <td valign="top">Main</td>
       <td valign="top">Attachments</td>
+      <td valign="top">Weight</td>
       <td valign="top">Date</td>
       <td valign="top">Action</td>
     </tr>
@@ -188,6 +189,7 @@ if (isset($_GET['id']))
       <td valign="top"><?php echo $listRow['name']; ?> </td>
       <td valign="top"><?php echo ucfirst($listRow['featured']); ?></td>
       <td valign="top"><?php echo $listingFiles->getTotalAttachmentsByListingId($listRow['id']); ?></td>
+      <td valign="top"><?php echo $listRow['weight'];?></td>
       <td valign="top"><?php echo $listRow['onDate']; ?></td>
       <td valign="top"><a href="cms.php?id=<?php echo $_GET['id'] ?>&parentId=<?php echo $_GET['parentId']; ?>&groupType=<?php echo $_GET['groupType']; ?>&listId=<?php echo $listRow['id'] ?><?php if(isset($_GET['page'])) echo '&page='. $_GET['page']; ?>">Edit</a> / <a href="#" onclick="delete_confirmation('manage_cms.php?id=<?php echo $_GET['id'] ?>&parentId=<?php echo $_GET['parentId']; ?>&groupType=<?php echo $_GET['groupType']; ?>&deleteListId=<?php echo $listRow['id'] ?><?php if(isset($_GET['page'])) echo '&page='. $_GET['page']; ?>');">Delete</a> </td>
     </tr>

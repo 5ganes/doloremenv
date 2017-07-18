@@ -23,7 +23,7 @@
 		            <tbody>
 		            	<?php
 						$pagename = "index.php?linkId=". $pageId ."&";
-						$sql = "SELECT * FROM groups WHERE parentId = '$pageId' ORDER BY weight DESC";
+						$sql = "SELECT * FROM groups WHERE parentId = '$pageId' ORDER BY weight ASC";
 						$newsql = $sql;
 						$limit = LISTING_LIMIT;
 

@@ -962,12 +962,23 @@ class Groups
 		global $conn;
 		
 		
-		$sql = "SElECT * FROM groups WHERE parentId = '$parentId' ORDER BY weight, id DESC LIMIT $limit";
+		$sql = "SElECT * FROM groups WHERE parentId = '$parentId' ORDER BY weight LIMIT $limit";
 		$result = $conn->exec($sql);
 		
 		return $result;
 	}
-	
+
+	function getByParentIdWithOrderWithLimit($parentId, $orderby, $order, $limit)
+	{
+		global $conn;
+		
+		
+		$sql = "SElECT * FROM groups WHERE parentId = '$parentId' ORDER BY $orderby $order LIMIT $limit";
+		// echo $sql; die();
+		$result = $conn->exec($sql);
+		
+		return $result;
+	}
 		
 	function getByParentIdAndTypeWithLimit($type, $parentId, $limit)
 	{
