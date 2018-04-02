@@ -8,12 +8,12 @@
               <div class="col-md-8 center-text title-text" style="line-height: 20px;">
                   <?php if($lan=='en'){?>
                       <p>Government of Nepal</p>
-                      <h3>Ministry of Population and Environment</h3>
+                      <h3>Ministry of Forests and Environment</h3>
                       <p>Department of Environment</p>
                   <?php }
                   else{?>
                       <p>नेपाल सरकार</p>
-                      <h3>जनसंख्या तथा वातावरण मन्त्रालय</h3>
+                      <h3>वन तथा वातावरण मन्त्रालय</h3>
                       <p>वातावरण विभाग</p>
                   <?php }?>
                   <!--<p>सिंहदरबार, काठमाडौँ, नेपाल</p>-->
